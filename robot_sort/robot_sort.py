@@ -97,7 +97,7 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        while not self.light_is_on(): #I can use the on and off light to stop my sorting loop
+        if not self.light_is_on(): #I can use the on and off light to stop my sorting loop
             self.set_light_on() #while its not on it has to be on
             while self.can_move_right():
                 self.swap_item()
@@ -113,6 +113,7 @@ class SortingRobot:
                     self.swap_item()
                     self.move_right()
                 if not self.light_is_on():
+                    self.set_light_on()
                     while self.can_move_left():
                         self.move_left()
 
