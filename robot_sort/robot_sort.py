@@ -97,7 +97,15 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+    if not self.light_is_on: #I can use the on and off light to stop my sorting loop
+        self.set_light_on #while its not on it has to be on
+        while self.can_move_right:
+            self.swap_item
+            self.move_right
+            if self.compare_item == 1: #This means if Robot is holding item with greater number
+
+    
+
 
 
 if __name__ == "__main__":
